@@ -9,7 +9,7 @@ const Header = () => {
         <div className='flex justify-between items-center'>
           <a
             href='#'
-            className='text-gradient btn-link cursor-pointer text-[36px]'
+            className='text-gradient btn-link cursor-pointer text-[36px] py-2'
           >
             Impact
           </a>
