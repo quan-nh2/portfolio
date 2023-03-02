@@ -20,7 +20,7 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className='text-sky-400/100 text-[55px] font-bold loading-[0.8] lg:text-[80px] mb-4 lg:mb-8'
             >
-              Quan Nguyen
+              Impact
             </motion.h1>
             <motion.div
               variants={fadeIn('up', 0.4)}
