@@ -4,6 +4,9 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./layouts/**/*.{js,ts,jsx,tsx}",
+    "./features/**/*.{js,ts,jsx,tsx}",
+
   ],
   theme: {
     fontFamily: {
@@ -31,6 +34,8 @@ module.exports = {
         site: "url('../assets/site-bg.jpg')",
         about: "url('../assets/about.jpg')",
         services: "url('../assets/services.png')",
+        weather: "url('../assets/weather-bg.jpeg')",
+        photo: "url('../assets/unsplash-bg.avif')"
       },
     },
   },

@@ -8,7 +8,7 @@ import Work from '@/components/Work';
 import Contact from '@/components/Contact';
 import Banner from '@/components/Banner';
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -30,4 +30,6 @@ export default function Home() {
       </main>
     </>
   );
-}
+};
+
+export default Home;

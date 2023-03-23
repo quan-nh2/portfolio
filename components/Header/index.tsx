@@ -1,6 +1,4 @@
-import Image from 'next/image';
-
-import Logo from '@/assets/logo.svg';
+import React from 'react';
 
 const Header = () => {
   return (
@@ -14,7 +12,9 @@ const Header = () => {
             Impact
           </a>
 
-          <button className='btn btn-sm'>Work with me</button>
+          <div>
+            <button className='btn btn-sm'>Work with me</button>
+          </div>
         </div>
       </div>
     </header>
