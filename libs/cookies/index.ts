@@ -9,7 +9,7 @@ import {
   removeCookies,
 } from 'cookies-next';
 
-type GetAuthReponse = {
+type GetAuthResponse = {
   phone?: string;
   token?: string;
   isAuth: boolean;
@@ -22,7 +22,7 @@ export const cleanAuth = () => {
   return removeCookies(TOKEN_NAMESPACE);
 };
 
-export const getAuth = (): GetAuthReponse => {
+export const getAuth = (): GetAuthResponse => {
   const init = { isAuth: false };
 
   const token = getCookie(TOKEN_NAMESPACE) as string;
@@ -45,7 +45,7 @@ export const getAuth = (): GetAuthReponse => {
 export const getAuthServer = ({
   req,
   res,
-}: GetServerSidePropsContext): GetAuthReponse => {
+}: GetServerSidePropsContext): GetAuthResponse => {
   const init = { isAuth: false, token: '', id: null };
 
   const token = getCookie(TOKEN_NAMESPACE, { req, res }) as string;
@@ -68,9 +68,7 @@ export const getAuthServer = ({
 export const initAuth = (token: string): boolean => {
   try {
     const { exp } = JwtDecode(token) as { exp: number };
-
     setCookies(TOKEN_NAMESPACE, token, { expires: new Date(exp * 1000) });
-
     return true;
   } catch (_) {
     return false;
